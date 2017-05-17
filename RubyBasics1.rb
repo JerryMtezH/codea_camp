@@ -1,6 +1,6 @@
-title="Otro Post"
-description="Prueba para GIT 2"
-number_of_likes=1200
+title="Otro Post 1"
+description="Prueba para GIT 3"
+number_of_likes=7500
 POST_ID=1
 street="Av. Insurgentes"
 number="107 4to. Piso"
