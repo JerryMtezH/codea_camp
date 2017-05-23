@@ -1,0 +1,304 @@
+Comandos Vistos:
+
+Local:
+
+git init
+git status
+git add
+git commit
+git diff
+git log
+
+Remoto:
+
+git remote add origin ""
+git remote remove origin
+git push
+
+Ejercicio:
+
+C:\Users\gmartinez\Documents\codea_camp>git init
+Initialized empty Git repository in C:/Users/gmartinez/Documents/codea_camp/.git
+/
+C:\Users\gmartinez\Documents\codea_camp>dir
+ El volumen de la unidad C es Windows7_OS
+ El número de serie del volumen es: 4053-48C5
+
+ Directorio de C:\Users\gmartinez\Documents\codea_camp
+
+17/05/2017  10:48 a.m.    <DIR>          .
+17/05/2017  10:48 a.m.    <DIR>          ..
+17/05/2017  10:36 a.m.                 0 Notas GIT.txt
+17/05/2017  08:47 a.m.               312 prueba.rb
+17/05/2017  10:48 a.m.               145 RubyBasics1.rb
+               3 archivos            457 bytes
+               2 dirs  101,361,344,512 bytes libres
+
+C:\Users\gmartinez\Documents\codea_camp>cd .git
+
+C:\Users\gmartinez\Documents\codea_camp\.git>cd ,
+C:\Users\gmartinez\Documents\codea_camp\.git
+
+C:\Users\gmartinez\Documents\codea_camp\.git>dir
+ El volumen de la unidad C es Windows7_OS
+ El número de serie del volumen es: 4053-48C5
+
+ Directorio de C:\Users\gmartinez\Documents\codea_camp\.git
+
+17/05/2017  10:36 a.m.    <DIR>          branches
+17/05/2017  10:36 a.m.               157 config
+17/05/2017  10:36 a.m.                73 description
+17/05/2017  10:36 a.m.                23 HEAD
+17/05/2017  10:36 a.m.    <DIR>          hooks
+17/05/2017  10:50 a.m.               184 index
+17/05/2017  10:36 a.m.    <DIR>          info
+17/05/2017  10:50 a.m.    <DIR>          objects
+17/05/2017  10:36 a.m.    <DIR>          refs
+               4 archivos            437 bytes
+               5 dirs  101,361,565,696 bytes libres
+
+C:\Users\gmartinez\Documents\codea_camp\.git>cd ..
+
+C:\Users\gmartinez\Documents\codea_camp>
+C:\Users\gmartinez\Documents\codea_camp>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Notas GIT.txt
+        prueba.rb
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\gmartinez\Documents\codea_camp>git add *.rb
+
+C:\Users\gmartinez\Documents\codea_camp>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   RubyBasics1.rb
+        new file:   prueba.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Notas GIT.txt
+
+C:\Users\gmartinez\Documents\codea_camp>git commit -m "Commit 1 (Lunes Ej. GIT)"
+
+[master (root-commit) 0b60056] Commit 1 (Lunes Ej. GIT)
+ 2 files changed, 18 insertions(+)
+ create mode 100644 RubyBasics1.rb
+ create mode 100644 prueba.rb
+
+C:\Users\gmartinez\Documents\codea_camp>
+
+*** ----------------------------------- SE MODIFICO EL ARCHIVO CON  SUBLIME ------------------------------------------- ***
+
+C:\Users\gmartinez\Documents\codea_camp>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   RubyBasics1.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Notas GIT.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\gmartinez\Documents\codea_camp>git add RubyBasics1.rb
+
+C:\Users\gmartinez\Documents\codea_camp>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   RubyBasics1.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Notas GIT.txt
+
+C:\Users\gmartinez\Documents\codea_camp>git commit -m "Commit 2 (Lunes Ej. GIT)"
+
+[master 8e019e0] Commit 2 (Lunes Ej. GIT)
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+*** ----------------------------------- SE MODIFICO NUEVAMENTE EL ARCHIVO CON  SUBLIME ------------------------------------------- ***
+
+C:\Users\gmartinez\Documents\codea_camp>git diff
+diff --git a/RubyBasics1.rb b/RubyBasics1.rb
+index c661f0f..a820415 100644
+--- a/RubyBasics1.rb
++++ b/RubyBasics1.rb
+@@ -1,6 +1,6 @@
+-title="Nuevo Post"
+-description="Prueba para GIT"
+-number_of_likes=3
++title="Otro Post"
++description="Prueba para GIT 2"
++number_of_likes=1200
+ POST_ID=1
+ street="Av. Insurgentes"
+ number="107 4to. Piso"
+
+C:\Users\gmartinez\Documents\codea_camp>git add RubyBasics1.rb
+
+C:\Users\gmartinez\Documents\codea_camp>git commit -m "Commit 3 (Lunes Ej. GIT)"
+
+[master 52aa9de] Commit 3 (Lunes Ej. GIT)
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+C:\Users\gmartinez\Documents\codea_camp>git log
+commit 52aa9ded9f4b74d3767237e977d4204964c50575
+Author: JerryMtezH <gerardom.martinezh@gmail.com>
+Date:   Wed May 17 11:10:37 2017 -0500
+
+    Commit 3 (Lunes Ej. GIT)
+
+commit 8e019e04f98867a1d091e88f7028593f05b6b4b2
+Author: JerryMtezH <gerardom.martinezh@gmail.com>
+Date:   Wed May 17 11:04:59 2017 -0500
+
+    Commit 2 (Lunes Ej. GIT)
+
+commit 0b60056ba10bf0f1ced45eba2d166979a16c2b10
+Author: JerryMtezH <gerardom.martinezh@gmail.com>
+Date:   Wed May 17 10:56:14 2017 -0500
+
+    Commit 1 (Lunes Ej. GIT)
+
+C:\Users\gmartinez\Documents\codea_camp>git remote add origin https://github.com
+/JerryMtezH/nuevo.git
+
+EL SIGUIENTE ERROR ES DEBIDO A QUE NO CREE PREVIAMENTE EL REPOSITORIO DENTRO DE https://github.com ------------------------------------------
+
+C:\Users\gmartinez\Documents\codea_camp>git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': JerryMtezH
+Password for 'https://JerryMtezH@github.com':
+remote: Repository not found.
+fatal: repository 'https://github.com/JerryMtezH/nuevo.git/' not found
+
+CREE EL REPOSITORIO "codea_camp" DENTRO DE https://github.com ------------------------------------------------------------------------------------------
+
+AL INTENTAR AÑADIR EL REPOSITORIO "codea_camp" DENTRO DE https://github.com MANDO ERROR: ----------------------------------------------
+
+C:\Users\gmartinez\Documents\codea_camp>git remote add origin https://github.com
+/JerryMtezH/codea_camp.git
+fatal: remote origin already exists.
+
+ELIMINE EL ORIGEN -----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\gmartinez\Documents\codea_camp>git remote remove origin
+
+VOLVI A CONETAR EL NUEVO REPOSITORIO --------------------------------------------------------------------------------------------------------------------------
+
+C:\Users\gmartinez\Documents\codea_camp>git remote add origin https://github.com
+/JerryMtezH/codea_camp.git
+
+C:\Users\gmartinez\Documents\codea_camp>git push -u origin master
+Username for 'https://github.com': JerryMtezH
+Password for 'https://JerryMtezH@github.com':
+Counting objects: 10, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.25 KiB | 0 bytes/s, done.
+Total 10 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/JerryMtezH/codea_camp.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+--------------------------------  MODIFIQUE DE NUEVO EL ARCHIVO, LO AÑADI A STAGING, HICE COMMIT Y LO SUBI A gitHub.com ------------------------------------------
+
+C:\Users\gmartinez\Documents\codea_camp>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   RubyBasics1.rb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Notas GIT.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\gmartinez\Documents\codea_camp>git add RubyBasics1.rb
+
+C:\Users\gmartinez\Documents\codea_camp>git commit -m "Commit 4 (Lunes Ej. GIT)"
+
+[master 636f14a] Commit 4 (Lunes Ej. GIT)
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+C:\Users\gmartinez\Documents\codea_camp>git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Username for 'https://github.com': JerryMtezH
+Password for 'https://JerryMtezH@github.com':
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 362 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/JerryMtezH/codea_camp.git
+   52aa9de..636f14a  master -> master
+
+C:\Users\gmartinez\Documents\codea_camp>
