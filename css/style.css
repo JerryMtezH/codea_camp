@@ -1,9 +1,29 @@
 .list_elements{
-    text-align: left;
+    text-align: center;
     list-style-type: none;
     color: red;
     font-weight: bold;
+    float:center;
   }
-  .main_text{
+ .main_text{
     font-size: 20px;
   }
+ .general_settings{
+ 	text-align: center;
+ }
+ #lists_1{
+ 	text-align: center;
+ 	list-style-type: asterisks;
+ 	color: green;
+ 	align-items: center;
+ 	text-align-last: center
+ 	font-size: 50px;
+ }
+ #titulo_1{
+ 	color: blue;
+ 	font: sans-serif;
+ 	font-size: 50px;
+ }
+ td{
+ 	align-content: center;
+ }
